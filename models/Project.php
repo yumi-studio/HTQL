@@ -121,5 +121,16 @@ class Project{
         $stmt->bindParam(5,$data['pend']);
         $stmt->execute();
     }
+
+    public function delete($id)
+    {
+        $query="DELETE from project where id=$id";
+        $stmt=DB::getInstance()->prepare($query);
+        if($stmt->execute()){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
 }
 ?>

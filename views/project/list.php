@@ -148,6 +148,7 @@
                 mode: 1
             },
             success: function(result){
+                console.log(result);
                 sorting();
             }
         })
@@ -169,6 +170,7 @@
                 mode: 2
             },
             success: function(result){
+                console.log(result);
                 sorting();
             }
         })
@@ -177,7 +179,7 @@
     // Xóa project
     function deleteProject(x){
         $.ajax({
-            url: "control/del-project.php",
+            url: "?controller=project&action=delete",
             type: "post",
             dataType: "text",
             data: {

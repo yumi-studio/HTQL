@@ -16,7 +16,12 @@ class SalaryController extends BaseController{
     }
     public function update()
     {
-        Salary::update($_POST);
+        if (isset($_SESSION['status']) && $_SESSION['status']!=2) {
+            Salary::update($_POST);
+        } else {
+            
+        }
+        
     }
 }
 ?>
