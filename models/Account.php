@@ -115,5 +115,10 @@ class Account{
             $stmt->execute();
         }
     }
+    public static function updateAvatar($image){
+        $imgstr = "ava".$_SESSION['id'].".".(explode(".",$image['name'])[1]);
+        move_uploaded_file($image['tmp_name'],"assets/image/avatar/".$imgstr);
+        header("location: ?controller=home&action=profile");
+    }
 }
 ?>

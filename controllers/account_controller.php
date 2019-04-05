@@ -36,5 +36,13 @@ class AccountController extends BaseController{
             Account::delete($_SESSION['status'],$_POST['id']);
         }
     }
+    public function changeavatar()
+    {
+        if(isset($_FILES['image'])){
+            Account::updateAvatar($_FILES['image']);
+        }else{
+            header('location: ?controller=home&action=profile');
+        }
+    }
 }
 ?>

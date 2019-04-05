@@ -28,12 +28,11 @@
         <div class="card">
             <div class="card-body">
                 <div id="frame">
-                    <img src="image/avatar.png" alt="Đây là avatar">
+                    <img src="assets/image/avatar/ava<?=$_SESSION['id']?>.png" alt="Đây là avatar">
                 </div>
-                
             </div>
             <div class="card-body">
-                <form action="control/changeAvatar.php" method="post" enctype='multipart/form-data'>
+                <form action="?controller=account&action=changeavatar" method="post" enctype='multipart/form-data'>
                     <div class="input-group">
                         <input type="file" name="image" id="" class="form-control">
                         <input type="submit" value="Lưu thay đổi" class="btn btn-success w-100">

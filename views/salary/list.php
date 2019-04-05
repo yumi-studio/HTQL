@@ -18,7 +18,7 @@
                         # code...
 
                         //CT Tính lương
-                        $total = $value['fixed_salary']+$value['bonus']*1000-$value['fines']*500;
+                        $total = $value['fixed_salary']+$value['bonus']*20-$value['fines']*50;
                     ?>
                         <tr id="<?php echo $value['sid']?>">
                             <td><?php echo $value['name']?></td>
@@ -106,7 +106,7 @@
         var fines = $(x).find('input[name=fines]').val();
 
         // CT tính lương
-        var total = parseInt(fixed)+parseInt(bonus)*1000-parseInt(fines)*500;
+        var total = parseInt(fixed)+parseInt(bonus)*20-parseInt(fines)*50;
         $(x).children(':last-child').html(total);
         $('#btnsave').prop("disabled",false)
     }

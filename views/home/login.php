@@ -11,23 +11,6 @@
     <div class="form-group">
         <input type="submit" value="<?php echo(isset($_SESSION['lang'])&&$_SESSION['lang']=="en"?"Login":"Đăng nhập")?>" class="btn btn-danger" name="btnLogin">
     </div>
-    <div class="form-group">
-        <select name="lang" id="" onchange="langChange()" class="form-control">
-            <?php
-            if($_GET['lang']=="en"){
-                echo '<option value="0" selected hidden>----------Select Language----------</option>
-                <option value="en">English</option>
-                <option value="vn">Vietnamese</option>';
-            }
-            if($_GET['lang']=="vn"){
-                echo '<option value="0" selected hidden>----------Chọn ngôn ngữ----------</option>
-                <option value="en">Tiếng anh</option>
-                <option value="vn">Tiếng việt</option>';
-            }
-            ?>
-            
-        </select>
-    </div>
 </form>
 <script>
 function langChange(){

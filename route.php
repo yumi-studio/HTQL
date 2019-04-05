@@ -1,7 +1,7 @@
 <?php
 $controlList = array(
     'home'=>['index','login','logout','identify','employee','profile'],
-    'account'=>['identify','list','getall','getdata','search','view','create','update','delete'],
+    'account'=>['identify','list','getall','getdata','search','view','create','update','delete','changeavatar'],
     'project'=>['list','getall','getproject','view','update','delete','sort','member','register','create'],
     'salary'=>['view','list','update']
 );
